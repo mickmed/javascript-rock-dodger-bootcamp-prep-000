@@ -145,20 +145,20 @@ function moveDodgerLeft() {
 
  
     
-function moveDodgerRight() {
+function moveDodgerRight(dodger) {
   
   var rightNumbers = dodger.style.left.replace('px', '')
   var right = parseInt(rightNumbers, 10)
-   if (right <300) {
   function step() {
     dodger.style.left = `${right += 2}px`
  
-   
-    
- 
+    if (right <300) {
+      window.requestAnimationFrame(step)
+    }
+  }
   window.requestAnimationFrame(step)
 }
-   }}  
+    
 //function moveDodgerRight() {
   // implement me!
   /**
