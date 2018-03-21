@@ -135,9 +135,14 @@ function moveDodgerLeft() {
   var left = parseInt(leftNumbers, 10)
   
  
-  if (left > 0) {
-    dodger.style.left = `${left - 1}px`
+  function step() {
+    dodger.style.left = `${lrft -= 2}px`
+ 
+    if (right <300) {
+      window.requestAnimationFrame(step)
+    }
   }
+  window.requestAnimationFrame(step)
 }
 
 //function moveDodgerRight() {
