@@ -154,12 +154,11 @@ function moveDodgerRight() {
     dodger.style.left = `${right += 2}px`
  
    
-      window.requestAnimationFrame(step)
-    }
-  }
+    
+ 
   window.requestAnimationFrame(step)
 }
-    
+   }}  
 //function moveDodgerRight() {
   // implement me!
   /**
