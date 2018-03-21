@@ -121,7 +121,7 @@ function moveDodger(e) {
    */
    
    if (e.which === 37) {
-     dodger.moveDodgerLeft();
+     DODGER.moveDodgerLeft();
    }
    
    if (e.which === 39) {
