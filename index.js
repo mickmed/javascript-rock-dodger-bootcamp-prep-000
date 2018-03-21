@@ -131,18 +131,16 @@ function moveDodger(e) {
 }
 
 function moveDodgerLeft() {
-  
-  function step() {
+ 
     var leftNumbers = dodger.style.left.replace('px', '')
-  var left = parseInt(leftNumbers, 10)
+    var left = parseInt(leftNumbers, 10)
     
     dodger.style.left = `${left -= 2}px`
  
     if (left >100) {
       window.requestAnimationFrame(step)
     }
-  }
-  window.requestAnimationFrame(step)
+  
 }
 
  
