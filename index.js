@@ -121,7 +121,7 @@ function moveDodger(e) {
    */
    
    if (e.which === 37) {
-     moveDodgerLeft();
+     dodger.moveDodgerLeft();
    }
    
    if (e.which === 39) {
@@ -130,8 +130,8 @@ function moveDodger(e) {
    
 }
 
-function moveDodgerLeft() {
-  var leftNumbers = dodger.style.left.replace('px', '')
+function moveDodgerLeft(el) {
+  var leftNumbers = el.style.left.replace('px', '')
   var left = parseInt(leftNumbers, 10)
   function step() {
     dodger.style.left = `${left -= 2}px`
