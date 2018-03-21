@@ -133,7 +133,6 @@ function moveDodger(e) {
 function moveDodgerLeft() {
   var leftNumbers = dodger.style.left.replace('px', '')
   var left = parseInt(leftNumbers, 10)
-  
   function step() {
     dodger.style.left = `${left -= 2}px`
  
@@ -150,8 +149,6 @@ function moveDodgerRight() {
   
   var rightNumbers = dodger.style.left.replace('px', '')
   var right = parseInt(rightNumbers, 10)
-  
-  
   function step() {
     dodger.style.left = `${right += 2}px`
  
