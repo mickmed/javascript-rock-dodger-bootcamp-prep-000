@@ -149,6 +149,7 @@ function moveDodgerRight() {
   
   var rightNumbers = dodger.style.left.replace('px', '')
   var right = parseInt(rightNumbers, 10)
+  
   function step() {
     dodger.style.left = `${right += 2}px`
  
