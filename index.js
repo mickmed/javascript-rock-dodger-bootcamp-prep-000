@@ -134,11 +134,10 @@ function moveDodgerLeft() {
   var leftNumbers = dodger.style.left.replace('px', '')
   var left = parseInt(leftNumbers, 10)
   
- 
   function step() {
     dodger.style.left = `${lrft -= 2}px`
  
-    if (right <300) {
+    if (left >0) {
       window.requestAnimationFrame(step)
     }
   }
