@@ -119,23 +119,66 @@ function moveDodger(e) {
    * we've declared for you above.)
    * And be sure to use the functions declared below!
    */
+   
+   if (e.which === 37) {
+     moveDodgerLeft();
+   }
+   
+   if (e.which === 39) {
+     moveDodgerRight();
+   }
+   
 }
 
 function moveDodgerLeft() {
-  // implement me!
-  /**
-   * This function should move DODGER to the left
-   * (mabye 4 pixels?). Use window.requestAnimationFrame()!
-   */
+  var leftNumbers = dodger.style.left.replace('px', '')
+  
+ 
+  var left = parseInt(leftNumbers, 10)
+ 
+  if (left > 0) {
+    dodger.style.left = `${left - 1}px`
+  }
 }
 
-function moveDodgerRight() {
+//function moveDodgerRight() {
   // implement me!
   /**
    * This function should move DODGER to the right
    * (mabye 4 pixels?). Use window.requestAnimationFrame()!
    */
+   
+  // var rightNumbers = dodger.style.left.replace('px', '')
+    
+  // var right = parseInt(rightNumbers, 10)
+
+  // if (right > 0) {
+  //   //alert(right);
+  //   dodger.style.left = `${right + 1}px`
+    
+function moveDodgerRight() {
+  
+  var rightNumbers = dodger.style.left.replace('px', '')
+  var right = parseInt(rightNumbers, 10)
+  
+  
+  function step() {
+    dodger.style.left = `${right += 2}px`
+ 
+    if (right <300) {
+      window.requestAnimationFrame(step)
+    }
+  }
+ 
+  window.requestAnimationFrame(step)
 }
+    
+    
+    
+    
+    
+//   }
+// }
 
 /**
  * @param {string} p The position property
